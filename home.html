@@ -1,439 +1,907 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>{% block title %}Viglione Investigations{% endblock %}</title>
+<style>
+ /*
+    Colors : #FFB700 , #4A4A4A
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: vazir;
+  background: #132a13;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: #fff;
+  padding: 10px;
+}
+
+i{
+  color: black;
+  font-size: 20px;
+}
+
+a::after {
+  content: "";
+  width: 56px;
+  height: 2px;
+  position: absolute;
+  background-color: #ecf39e;
+  bottom: 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 50px auto 0;
+  max-width: 620px;
+}
+.question {
+  background: #31572c;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.question-title p {
+  color: #ffffff;
+  font-weight: bolder;
+}
+.question-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: #fff;
+}
+
+.question-text {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 5px solid #4f772d;
+}
+
+/* hide text */
+.question-text {
+  display: none;
+}
+.show-text .question-text {
+  display: block;
+}
+.minus-icon {
+  display: none;
+}
+.show-text .minus-icon {
+  display: inline;
+}
+.show-text .plus-icon {
+  display: none;
+}
+
+/* Start Main Css */
+
+nav
+{
+  width: 80%;
+  margin-left: 10%;
+  height: 80px;
+}
+nav .logo
+{
+  float: left;
+  width: 30%;
+  background: #0000FF;
+  height: 100%;
+  text-align: center;
+  padding-top: 9px;
+  box-sizing: border-box;
+}
+nav .mainnav
+{
+  width: 70%;
+  float: left;
+  background: #4A4A4A;
+  height: 100%;
+}
+nav .mainnav ul
+{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+nav .mainnav ul li
+{
+  list-style-type: none;
+  width: 20%;
+  float: left;
+  text-align: center;
+  height: 100%;
+  line-height: 80px;
+}
+nav .mainnav ul li a
+{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: arial;
+}
+
+body {background-color: black;}
+
+h1{
+color: white;
+font-family: arial;
+}
+
+h3{
+color: red;
+}
+
+h4{
+color: yellow;
+font-family: courier;
+font-size: 30px;
+}
+
+#address_link_text{
+color: white;
+text-decoration: none;
+font-family: lucinda;
+font-size: 20px;
+}
+
+#address_link_position{
+text-align: center;
+}
+
+#div_position_misc{
+text-align: center;
+}
+
+p{
+color: white;
+font-family: arial;
+font-size: 20px;
+}
+
+p2{
+color: white;
+font-family: arial;
+font-size: 20px;
+}
+
+p3{
+color: white;
+font-family: arial;
+font-size: 20px;
+}
+
+#services_list{
+color: white;
+font-family: times;
+font-size: 25px;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+
+</style>
 </head>
 
-<body>
-    <div id="content" name="content">
-	{% block content %}
+</style>
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Viglione Investigations - Home</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h1>Viglione Investigations</h1>
+      </div>
+      <div class="mainnav">
+        <ul class="mainul">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'blog-testimonials' %}">Testimonials</a>
+          </li>
+          <li>
+            <a href="{% url 'blog-references' %}">References</a>
+          </li>
+          <li>
+            <a href="{% url 'blog-pay_invoice' %}">Pay Invoice</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
 
-        <body id="dmRoot" data-page-alias="home" class="supportsFontIcons supportsFontIcons dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody  pcCustomScrollbar d1SiteBody dmBodyNoIscroll fullyLoaded" style="padding:0;margin:0;">
-
-<!-- ========= Site Content ========= -->
-<div id="dm" class="dmwr">
-
-    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
-         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-home hasAnimations rows-1200 dmPageBody dmFreeHeader d-page-1716942098 runtime-module-container" id="dm-outer-wrapper" data-page-class="1716942098" data-buttonstyle="ROUND_SIDES" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="dmHeader p_hfcontainer u_hcontainer" freeheader="true" headerlayout="696"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1346248846 dmRespRow" id="1346248846"> <div class="dmRespColsWrapper" id="1352483023"> <div class="u_1376679585 dmRespCol small-12 large-5 medium-5" id="1376679585"> <div class="u_1900445884 dmNewParagraph" data-element-type="paragraph" id="1900445884" style="transition: opacity 1s ease-in-out 0s; display: block;"><font style="" class="font-size-36 lh-1"><b style=""><span style="font-family: 'Open Sans'; font-weight: 400;" class="m-font-size-36 lh-1 font-size-40"><font style=""><a href="/" runtime_url="/" style=""><font style=""><font style="">Viglione</font> <font style=""></font>
-</font><font style="color: rgb(204, 204, 204);">Investigations</font></a></font></span><a href="/" runtime_url="/" class="font-size-30 lh-1"></a></b></font></div></div>
- <div class="u_1954775729 dmRespCol small-12 large-7 medium-7" id="1954775729"> <div class="u_1040829991 dmNewParagraph" data-element-type="paragraph" id="1040829991" style="transition: opacity 1s ease-in-out 0s;"><font style=""><font style="color: rgb(169, 169, 169);">Address:&nbsp;</font>
-<font style="color: rgb(204, 204, 204);"><b style=""><i style=""><a href="https://www.google.com/maps/place/40+NE+Industrial+Rd,+Branford,+CT+06405,+USA/@41.3014059,-72.7709045,17z/data=!3m1!4b1!4m5!3m4!1s0x89e7d45d5379f707:0x3f825ec9c2347053!8m2!3d41.3014019!4d-72.7687158" runtime_url="https://www.google.com/maps/place/40+NE+Industrial+Rd,+Branford,+CT+06405,+USA/@41.3014059,-72.7709045,17z/data=!3m1!4b1!4m5!3m4!1s0x89e7d45d5379f707:0x3f825ec9c2347053!8m2!3d41.3014019!4d-72.7687158" target="_blank" style="color: rgb(204, 204, 204);">40 North East Industrial Rd.,Branford,Ct. 2nd floor&nbsp;&nbsp;</a></i></b></font></font><font style="color: rgb(204, 204, 204);"><b style=""><i style=""><a href="https://www.google.com/maps/place/40+NE+Industrial+Rd,+Branford,+CT+06405,+USA/@41.3014059,-72.7709045,17z/data=!3m1!4b1!4m5!3m4!1s0x89e7d45d5379f707:0x3f825ec9c2347053!8m2!3d41.3014019!4d-72.7687158" runtime_url="https://www.google.com/maps/place/40+NE+Industrial+Rd,+Branford,+CT+06405,+USA/@41.3014059,-72.7709045,17z/data=!3m1!4b1!4m5!3m4!1s0x89e7d45d5379f707:0x3f825ec9c2347053!8m2!3d41.3014019!4d-72.7687158" target="_blank" style="color: rgb(204, 204, 204);"></a></i></b></font></div> <div class="dmNewParagraph u_1609256843" data-element-type="paragraph" id="1609256843" style="transition: opacity 1s ease-in-out 0s;"><font style=""><font style="color: rgb(169, 169, 169);">Email:</font>
-<a href="mailto:viglioneinvestigations@yahoo.com" runtime_url="mailto:viglioneinvestigations@yahoo.com" style=""><font style="color: rgb(204, 204, 204);"><b style=""><i>viglioneinvestigations@yahoo.com</i></b></font></a></font></div> <div class="u_1897077073 align-center text-align-center dmSocialHub" id="1897077073" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://www.facebook.com/pages/category/Advertising-Marketing/Private-criminal-defense-investigations-1134345970053033/" target="_blank" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event('socialLink', 'click', 'Facebook')"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style6" data-hover-effect=""></span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
- <div class="u_1575566271 dmRespRow" id="1575566271"> <div class="dmRespColsWrapper" id="1221762927"> <div class="u_1644508084 dmRespCol small-12 large-8 medium-8" id="1644508084"> <nav class="u_1069982053 effect-text-color main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_2" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1069982053" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul class="unifiednav__container  " data-auto="navigation-pages"> <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item   dmUDNavigationItem_00 currentPage dmNavItemSelected" target="" data-target-page-alias="" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
-         Home
-        " data-auto="page-text-style">Home<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-about' %}" class="unifiednav__item  dmUDNavigationItem_010101627085" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         About Us
-        " data-auto="page-text-style">About Us<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-testimonials' %}" class="unifiednav__item  dmUDNavigationItem_010101874136" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         Testimonials
-        " data-auto="page-text-style">Testimonials<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-services' %}" class="unifiednav__item  dmUDNavigationItem_010101896691" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         Private Investigator Services
-        " data-auto="page-text-style">Private Investigator Services<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-references' %}" class="unifiednav__item  dmUDNavigationItem_010101934158" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         References
-        " data-auto="page-text-style">References<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-contact_us' %}" class="unifiednav__item  dmUDNavigationItem_010101445598" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         Contact Us
-        " data-auto="page-text-style">Contact Us<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
-</ul>
-</nav>
-</div>
- <div class="u_1487587509 dmRespCol small-12 large-4 medium-4" id="1487587509"> <a data-display-type="block" class="u_1317378282 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="tel:(203) 871-9742" data-element-type="dButtonLinkId" id="1317378282" data-buttonstyle="FLAT_ROUND_ICON" icon-name="dm-icon-phone"> <span class="iconBg" id="1613129463"> <span class="icon hasFontIconstar hasFontIcon dm-icon-phone" id="1110849622"></span>
-</span>
- <span class="text" id="1183278900">(203)871-9742</span>
-</a>
-</div>
-</div>
-</div>
-<!-- Template Name: Blank Template --></div>
-</div>
-</div>
- <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr></div>
-<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"></div>
- <div class="titleLine display_None"><hr></div>
-</div>
-</div>
-</div>
-</div>
- <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_home dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl dmRespRowsWrapperSize1" id="1716942098"> <div class="u_1278241624 dmRespRow hide-for-small hide-for-medium" id="1278241624"> <div class="dmRespColsWrapper" id="1601498293"> <div class="u_1222751593 dmRespCol small-12 large-5 medium-5" id="1222751593"> <div class="u_1530531116 dmNewParagraph" data-element-type="paragraph" id="1530531116" style="display: block; visibility: visible !important; transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important; opacity: 1; transform: scale(1);" data-anim-desktop="zoomIn"><font style="" class="font-size-36 lh-1"><b style=""><span style="font-family: 'Open Sans'; font-weight: 400;" class="m-font-size-36 lh-1 font-size-40"><font style=""><a href="/" runtime_url="/" style=""><font style="color: rgb(44, 168, 246);"><font style="">Viglione</font> <font style=""></font>
-</font><font style="color: rgb(204, 204, 204);">Investigations</font></a></font></span><a href="/" runtime_url="/" class="font-size-30 lh-1"></a></b></font></div></div>
- <div class="u_1926764737 dmRespCol small-12 large-7 medium-7 content-removed" id="1926764737" data-anim-desktop="fadeInLeft" style="visibility: visible !important; transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important; opacity: 1; transform: translate3d(0%, 0%, 0px);"> <div class="u_1896854032 dmNewParagraph" data-element-type="paragraph" id="1896854032" style="transition: opacity 1s ease-in-out 0s;"><font style=""><font style="color: rgb(169, 169, 169);">Address:&nbsp;</font>
-<a href="https://goo.gl/maps/96GaFaGg4srWdQV59" runtime_url="https://goo.gl/maps/96GaFaGg4srWdQV59" target="_blank" style="color: rgb(204, 204, 204);"><font style="color: rgb(204, 204, 204);"><b><i>40 North East Industrial Road, Floor #2, Branford, Connecticut &nbsp;&nbsp;</i></b></font></a></font><a href="https://goo.gl/maps/96GaFaGg4srWdQV59" runtime_url="https://goo.gl/maps/96GaFaGg4srWdQV59" target="_blank" style="color: rgb(204, 204, 204);"><font style="color: rgb(204, 204, 204);"><b><i>(click for map)</i></b></font></a></div> <div class="dmNewParagraph u_1405232408" data-element-type="paragraph" id="1405232408" style="transition: opacity 1s ease-in-out 0s;"><font style=""><font style="color: rgb(169, 169, 169);">Email:</font>
-<a href="mailto:viglioneinvestigations@yahoo.com" runtime_url="mailto:viglioneinvestigations@yahoo.com" style=""><font style="color: rgb(204, 204, 204);"><b style=""><i>viglioneinvestigations@yahoo.com</i></b></font></a></font></div> <div class="u_1631617061 align-center text-align-center dmSocialHub" id="1631617061" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://www.facebook.com/pages/category/Advertising-Marketing/Private-criminal-defense-investigations-1134345970053033/" target="_blank" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event('socialLink', 'click', 'Facebook')"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style6" data-hover-effect=""></span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
- <div class="u_1366205372 dmRespRow hide-for-small hide-for-medium" id="1366205372"> <div class="dmRespColsWrapper" id="1791474753"> <div class="u_1657292988 dmRespCol small-12 large-8 medium-8" id="1657292988"> <nav class="u_1382255031 effect-text-color main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_2" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1382255031" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="HORIZONTAL" data-anim-desktop="fadeInLeft" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav" style="visibility: visible !important; transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important; opacity: 1; transform: translate3d(0%, 0%, 0px);"> <ul class="unifiednav__container  " data-auto="navigation-pages"> <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item   dmUDNavigationItem_00 currentPage dmNavItemSelected" target="" data-target-page-alias="" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
-         Home
-        " data-auto="page-text-style">Home<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-about' %}" class="unifiednav__item  dmUDNavigationItem_010101627085" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         About Us
-        " data-auto="page-text-style">About Us<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-testimonials' %}" class="unifiednav__item  dmUDNavigationItem_010101874136" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         Testimonials
-        " data-auto="page-text-style">Testimonials<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-services' %}" class="unifiednav__item  dmUDNavigationItem_010101896691" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         Private Investigator Services
-        " data-auto="page-text-style">Private Investigator Services<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-references' %}" class="unifiednav__item  dmUDNavigationItem_010101934158" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         References
-        " data-auto="page-text-style">References<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-contact_us' %}" class="unifiednav__item  dmUDNavigationItem_010101445598" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         Contact Us
-        " data-auto="page-text-style">Contact Us<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
-</ul>
-</nav>
-</div>
- <div class="u_1450230063 dmRespCol small-12 large-4 medium-4" id="1450230063"> <a data-display-type="block" class="u_1584531179 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="tel:(203) 871-9742" data-element-type="dButtonLinkId" id="1584531179" data-buttonstyle="FLAT_ROUND_ICON" icon-name="dm-icon-phone" data-anim-desktop="fadeInRight" style="visibility: visible !important; transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important; opacity: 1; transform: translate3d(0%, 0%, 0px);"> <span class="iconBg" id="1970949375"> <span class="icon hasFontIconstar hasFontIcon dm-icon-phone" id="1642240212"></span>
-</span>
- <span class="text" id="1712409383">(203) 871-9742</span>
-</a>
-</div>
-</div>
-</div>
- <div class="u_1714849542 dmRespRow hide-for-small hide-for-medium" id="1714849542"> <div class="dmRespColsWrapper" id="1052366258"> <div class="u_1674214612 dmRespCol small-12 large-7 medium-7" id="1674214612" data-anim-desktop="fadeInUp" style="visibility: visible !important; transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important; opacity: 1; transform: translate3d(0%, 0%, 0px);"> <div class="u_1728067419 dmNewParagraph" data-element-type="paragraph" id="1728067419" style="transition: none 0s ease 0s; display: block;"><font><span style="font-weight: 400; font-family: 'Open Sans Hebrew';" class="lh-1 m-font-size-36 font-size-40"><font style="color: rgb(255, 255, 255);">Private investigator located in Branford, Connecticut</font></span></font></div> <div class="dmNewParagraph" data-element-type="paragraph" id="1511576459" style="transition: opacity 1s ease-in-out 0s;"><font><span style="font-weight: 400; font-family: Roboto;" class="lh-1 font-size-25"><font style="color: rgb(204, 204, 204);"><i style="">Serving all of Connecticut&nbsp;</i></font></span></font></div> <a data-display-type="block" class="u_1357969145 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="tel:(203) 871-9742" data-element-type="dButtonLinkId" id="1357969145"> <span class="iconBg" id="1373069044"> <span class="icon hasFontIcon icon-star" id="1612603631"></span>
-</span>
- <span class="text" id="1276146689">Give Us a Call Today!</span>
-</a>
-</div>
- <div class="u_1222325490 dmRespCol small-12 large-5 medium-5" id="1222325490"> <div data-element-type="spacer" class="dmSpacer u_1588004180" id="1588004180"></div>
-</div>
-</div>
-</div>
- <div class="u_1587852281 dmRespRow" id="1587852281" data-anim-desktop="fadeInUp" style="visibility: visible !important; transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important; opacity: 1; transform: translate3d(0%, 0%, 0px);"> <div class="dmRespColsWrapper" id="1122758119"> <div class="dmRespCol large-12 medium-12 small-12 content-removed" id="1439552620"> <h1 class="u_1155299800 dmNewParagraph hide-for-small hide-for-medium" data-element-type="paragraph" id="1155299800" style="transition: opacity 1s ease-in-out 0s;">Thank you for visiting Viglione's Private Investigations</h1> <div class="u_1185927300 dmRespRow" id="1185927300" mode="4"> <div class="dmRespColsWrapper" id="1402990003"> <div class="u_1324310673 dmRespCol large-5 medium-5 small-4" id="1324310673"> <div class="dmDividerWrapper clearfix u_1568328874" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1568328874" layout="divider-style-3"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1893191814"></div>
-</div>
- <div class="u_1231223828 dmRespCol large-2 medium-2 small-4" id="1231223828"> <div class="u_1345162611 graphicWidget" data-element-type="graphic" data-widget-type="graphic" id="1345162611"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" id="1324093736" class="svg u_1324093736" data-icon-name="li_gavel"> <g id="1244299552"> <path d="M40.2,70.8c2.3,2.3,5.4,3.6,8.6,3.6c3.2,0,6.3-1.3,8.6-3.6c4.7-4.7,4.7-12.5,0-17.2l-7-7l29.2-29.2L78,15.9L48.9,45l-7-7
-		c-2.3-2.3-5.4-3.6-8.6-3.6c-3.2,0-6.3,1.3-8.6,3.6c-4.7,4.7-4.7,12.5,0,17.2L40.2,70.8z M55.9,69.3c-1.9,1.9-4.4,2.9-7,2.9
-		c-2.3,0-4.4-0.8-6.2-2.2l13.9-13.9C59.7,60,59.5,65.7,55.9,69.3z M55.1,54.4L41,68.5L27,54.4L41,40.3L55.1,54.4z M26.2,39.6
-		c1.9-1.9,4.4-2.9,7-2.9c2.3,0,4.4,0.8,6.2,2.2L25.5,52.8C22.4,48.9,22.6,43.2,26.2,39.6z" id="1758615269"></path>
- <rect x="12.4" y="81.9" width="66.4" height="2.2" id="1074561303"></rect>
-</g>
-</svg>
-</div>
-</div>
- <div class="u_1838287096 dmRespCol large-5 medium-5 small-4" id="1838287096"> <div class="dmDividerWrapper clearfix u_1731844132" data-element-type="dDividerId" data-layout="divider-style-1" data-widget-version="2" id="1731844132" layout="divider-style-3"><hr class="dmDivider" style="border-width:2px; border-top-style:solid; color:grey;" id="1224868621"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
- <div class="u_1528399267 dmRespRow running-animation-TOBVISSU" id="1528399267" data-anim-desktop="fadeInRight" style="visibility: hidden; opacity: 1; transform: translate3d(0%, 0%, 0px); transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important;"> <div class="dmRespColsWrapper" id="1969914138"> <div class="u_1454538255 dmRespCol small-12 large-6 medium-6" id="1454538255"> <div class="u_1174326819 dmNewParagraph" data-element-type="paragraph" id="1174326819" style="transition: opacity 1s ease-in-out 0s;"><div><span style="" class="font-size-18 lh-1"><b>Viglione Investigations</b>
-&nbsp;is your preferred private investigator serving all of CT. Sal Viglione is a retired police officer with the <b>New Haven</b>
-police department who oversees and assist clients to win their cases. As licensed investigators, we respect your need for a private investigator and handle your case with the utmost care and discretion.&nbsp; With over 25 years of experience&nbsp; Salvatore Viglione has the insight for what happens in proceedings and what effects sloppy police work can have on a falsely accused perpetrator.&nbsp;&nbsp;</span></div></div> <div class="dmNewParagraph" data-element-type="paragraph" id="1298920571" style="transition: opacity 1s ease-in-out 0s;"><div><span style="" class="font-size-18 lh-1">Viglione Investigations specializes in criminal defense cases specializing in <b>habeas corpus, indigent, court appointed, conflict and ex parte cases</b>. Salvatore Viglione is a vendor for the <b>Connecticut</b>
-Public Defenders office. We also handle all types of business and personal fraud and litigation services, but we are well suited to handle any type of investigation from simple surveillance investigations to more complex fraud and embezzlement cases.</span></div><div><span style="font-size: 18px;"><br></span></div><div><span style="font-size: 18px;">We are&nbsp; very meticulous with all our services and if the client qualifies, the state may pay for their services and pay the fees of the attorney and the investigator (<i>although private cases require a retainer</i>). Expert witness statements, photographs, and videos can be taken to help solidify and win your case!&nbsp;</span><br></div></div></div>
- <div class="u_1044481881 dmRespCol large-6 medium-6 small-12" id="1044481881"> <div class="u_1042195665 default dmShape" id="1042195665" dmle_extension="shape" data-element-type="shape" text-position="center_center" data-hover-effect="zoomout" wr="true" icon="true" surround="true" adwords="" shape-text="" shape-description="" shape-image="https://irp-cdn.multiscreensite.com/7242d654/dms3rep/multi/img3.jpg" alt-text="Back Ground Checks — Legal Services in Branford, CT" tooltip="Back Ground Checks — Legal Services in Branford, CT" shape-type="shape6" show-text-on-shape="false" show-description-on-shape="false" shape-color="" shape-show-shadow="true" border-color-shape="" show-background-overlay="false" overlay-color="#ffffff" image-position="xMidYMid" shape-keep-proportion="true" shape-layout="layout2" border-width-shape="0" overlay-opacity="50" link-attrs="e30="> <a data-link-id="shape-link-container" id="1116886622"> <svg width="100%" height="100%" viewBox="0.00 0.00 100 100" class="shadow" id="1487610175"> <title>Back Ground Checks — Legal Services in Branford, CT</title>
- <g> <clipPath id="shape-1042195665"> <path d="M85.1,12.3c-5.4-4.5-11.7-7.9-18.5-9.9c-4.2-1.3-8.4-2-12.8-2.3c-2.1-0.1-4.2-0.1-6.4,0c-2.8,0.1-5.5,0.4-8.3,0.9 			c-5.8,1-11.4,3.1-16.6,6c-6.9,3.7-12.7,9.2-16.9,15.9c-5.4,8.5-7.1,18.9-4.6,28.7c2,8.1,6.5,15.4,12.9,20.9 			c8,7,17.9,11.4,28.5,12.6c2.5,0.1,4.4,2.3,4.3,4.8c0,0,0,0,0,0c0,0.1,0,0.2,0,0.3c-0.1,1.6-0.3,3.3-0.6,4.9 			c-0.3,1.2-0.4,2.5-0.2,3.7c0,0.7,0.6,1.2,1.3,1.2h0.1c1-0.1,2-0.4,3-0.8c4.3-2,8.3-4.4,12.1-7.2c8.4-5.9,16.2-12.4,23.6-19.6 			c2.6-2.3,4.9-4.9,6.9-7.8c4.5-6.4,6.9-14,7-21.8c0-3.5-0.5-6.9-1.4-10.2C96.3,24.7,91.5,17.6,85.1,12.3z"></path>
-</clipPath>
- <image clip-path="url(#shape-1042195665)" width="100%" height="100%" xlink:href="" alt="Background Checks — Legal Services in Branford, CT" preserveAspectRatio="xMidYMid slice"></image>
-<!-- In order to add stroke on image, need to create new shape without fill just with stroke --></g>
-</svg>
-</a>
-</div>
-</div>
-</div>
-</div>
- <div class="u_1175698879 dmRespRow" style="text-align: center;" id="1175698879"> <div class="dmRespColsWrapper" id="1028995156"> <div class="dmRespCol small-12 medium-12 large-12" id="1465241704"> <h3 class="u_1463785514 dmNewParagraph" id="1463785514" data-element-type="paragraph" style="transition: none 0s ease 0s; display: block;"><div style="text-align: center;"><span style="font-size: 40px;"><font style="color: rgb(5, 11, 179);">We Are Fueled By</font></span></div></h3></div>
-</div>
+<div id = "div_position_misc">
+<h3>Private investigator located in Branford, Connecticut. We serve all of Connecticut!</h3>
 </div>
 
- <h4 class="u_1746904960 dmNewParagraph" id="1746904960" style="display: block;" data-element-type="paragraph"><div style="text-align: center;"><font color="#284053"><span class="lh-1 font-size-18"><span style="font-weight: 700;">Results</span></span></font></div></h4> <div class="dmNewParagraph u_1733940097" id="1733940097" style="transition: opacity 1s ease-in-out; display: block;"><div style="text-align: center;"><font style="color: rgb(0, 0, 0);">We are a results-driven private investigations firm that offers innovative strategic guidance to every one of our clients.&nbsp;</font></div></div></div>
-</div>
-</div>
- <div class="u_1875575230 dmRespRow running-animation-TOHJ23AF" id="1875575230" data-anim-desktop="fadeInRight" style="visibility: hidden; opacity: 1; transform: translate3d(0%, 0%, 0px); transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important;"> <div class="dmRespColsWrapper" id="1098101710"> <div class="u_1867225388 dmRespCol small-12 medium-12 large-12" id="1867225388"> <h2 class="u_1526483661 dmNewParagraph" data-element-type="paragraph" id="1526483661" style="transition: opacity 1s ease-in-out 0s;">Our Services Include:</h2></div>
-</div>
-</div>
- <div class="dmRespRow u_1282980102 running-animation-TOT8HUEJ" id="1282980102" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6ImZhZGVJbkxlZnQifX0=" data-anim-desktop="fadeInLeft" style="visibility: hidden; opacity: 1; transform: translate3d(0%, 0%, 0px); transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important;"> <div class="dmRespColsWrapper" id="1441906449"> <div class="dmRespCol large-12 medium-12 small-12" id="1738898815"> <div class="dmNewParagraph u_1711408536" data-element-type="paragraph" data-version="5" id="1711408536" style="transition: opacity 1s ease-in-out 0s;"> <ul class="defaultList"><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial;" m-font-size-set="true">Complete compressive background reports.&nbsp;</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial;" m-font-size-set="true">Infidelity and cheater cases.&nbsp;</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial;" m-font-size-set="true">Divorce cases and disputes&nbsp;</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial;" m-font-size-set="true">Child custody and visitation cases.&nbsp;</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial;" m-font-size-set="true">Surveillance and tailing cases.&nbsp;</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial;" m-font-size-set="true">Locates.&nbsp;</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial;" m-font-size-set="true">Missing persons</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial;" m-font-size-set="true">Property&nbsp;</span><span class="font-size-18 m-font-size-16" style="display: initial; font-weight: inherit; font-style: inherit;" m-font-size-set="true">and asset checks.&nbsp;</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial; font-weight: inherit; font-style: inherit;" m-font-size-set="true">Worker Compensation cases.&nbsp;</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial; font-weight: inherit; font-style: inherit;" m-font-size-set="true">Auto accident investigations&nbsp;</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial; font-weight: inherit; font-style: inherit;" m-font-size-set="true">Insurance Fraud&nbsp;</span></li><li class="size-18 m-size-16"><span class="font-size-18 m-font-size-16" style="display: initial; font-weight: inherit; font-style: inherit;" m-font-size-set="true">Slip and fall cases.&nbsp;</span></li></ul>
-</div>
- <div class="u_1016802886 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1016802886" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-20 text-align-center size-20"><span class="m-font-size-20 font-size-20" m-font-size-set="true" style="display: initial; font-weight: bold;">For Defense Attorneys/ Criminal Defendants:&nbsp;</span></p></div>
- <div class="dmNewParagraph u_1272432608" data-element-type="paragraph" data-version="5" id="1272432608" data-styletopreserve="{" background-image":""}"=""> <ul class="defaultList"><li class="m-size-16 size-18"><span class="m-font-size-16 font-size-18" m-font-size-set="true" style="display: initial; font-weight: inherit; font-style: inherit;">Habeas/ Indigent &amp; Court appointed cases&nbsp;</span></li><li class="m-size-16 size-18"><span class="m-font-size-16 font-size-18" m-font-size-set="true" style="display: initial; font-weight: inherit; font-style: inherit;">Conflict &amp; Ex parte cases&nbsp;</span></li><li class="m-size-16 size-18"><span class="m-font-size-16 font-size-18" m-font-size-set="true" style="display: initial; font-weight: inherit; font-style: inherit;">Vendor for the Ct. Chief Public Defenders Dept. Vendor # 145377.&nbsp;</span></li><li class="m-size-16 size-18"><span class="m-font-size-16 font-size-18" m-font-size-set="true" style="display: initial; font-weight: inherit; font-style: inherit;">Private criminal defense investigations&nbsp;</span></li><li class="m-size-16 size-18"><span class="m-font-size-16 font-size-18" m-font-size-set="true" style="display: initial; font-weight: inherit; font-style: inherit;">Spanish Interpretation Services&nbsp;</span></li></ul>
-</div>
-</div>
-</div>
-</div>
- <div class="u_1156427637 dmRespRow running-animation-TP4HIOPS" id="1156427637" data-anim-desktop="fadeInRight" style="visibility: hidden; opacity: 1; transform: translate3d(0%, 0%, 0px); transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important;"> <div class="dmRespColsWrapper" id="1613002766"> <div class="u_1259727915 dmRespCol small-12 medium-12 large-12" id="1259727915"> <div class="u_1216651686 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1216651686" style="transition: opacity 1s ease-in-out 0s;"><p class="size-21 text-align-center m-size-15"><span class="font-size-21 m-font-size-15" style="display: initial;"><span class="font-size-21 m-font-size-15" m-font-size-set="true" style="display: initial;">Now offering (8) hour security guard card course &amp; classes for state certification.</span>
-</span></p><p class="text-align-center m-size-15 size-21"><span class="font-size-21 m-font-size-15" m-font-size-set="true" style="display: initial;"><span class="ql-cursor">﻿</span>(Instructor Vincent Riccio, retired police Sargent &amp; security prevention specialist).&nbsp;</span></p><p class="text-align-center"><span class="font-size-21 m-font-size-15" style="display: initial;"><br></span></p><p class="text-align-center m-size-15 size-21"><span class="font-size-21 m-font-size-15" m-font-size-set="true" style="font-style: normal; display: initial;">Note: Courses given with in Covid 19 requirements.&nbsp;</span><span single-space="true" class="font-size-21 m-font-size-15" style="font-style: normal; display: initial;"> <span class="font-size-21 m-font-size-15" style="font-style: normal; display: initial;"></span>
-</span></p></div>
- <div class="dmPhotoGallery newPhotoGallery dmPhotoGalleryResp u_1290328056" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="3" data-element-type="dPhotoGalleryId" data-desktop-text-layout="over" id="1290328056" data-placeholder="false" data-mobile-columns="1" editablewidget="true" data-widget-type="photoGallery"> <ul class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1822404141"> <li class="photoGalleryThumbs" id="1944445762"> <div class="image-container" id="1039653645"> <a data-dm-multisize-attr="href" data-image-url="https://irp-cdn.multiscreensite.com/7242d654/dms3rep/multi/2Now+offering+security+guard+classes.png" id="1626963614"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/7242d654/dms3rep/multi/opt/2Now+offering+security+guard+classes-1920w.png" id="1935248166" onerror="handleImageLoadError(this)"></a>
-</div>
- <div class="caption-container" style="display:none" id="1534401217"> <span class="caption-inner" id="1026413286"> <h3 class="caption-title" id="1099989982"></h3>
- <div class="caption-text" id="1888543400"></div>
- <a class="caption-button dmWidget clearfix" id="1360689163"> <span class="iconBg" id="1147640267"> <span class="icon hasFontIcon icon-star" id="1113254967"></span>
-</span>
- <span class="text" id="1929458081">Button</span>
+<br>
+<div id = "address_link_position">
+<a id="address_link_text" href="https://www.google.com/maps/place/40+E+Industrial+Rd,+Branford,+CT+06405/@41.299105,-72.755853,17z/data=!3m1!4b1!4m5!3m4!1s0x89e7d4f5460fc6d1:0xc94b72d3a0d204b2!8m2!3d41.299105!4d-72.755853">
+ Address: 40 North East Industrial Road, Floor #2, Branford, Connecticut, 06405
 </a>
-</span>
-</div>
-</li>
- <li class="photoGalleryThumbs" id="1946577165"> <div class="image-container" id="1263482148"> <a data-dm-multisize-attr="href" data-image-url="https://irp-cdn.multiscreensite.com/7242d654/dms3rep/multi/Training.jpg" id="1359934152" class="u_1359934152"><img irh="" irw="" alt="Training Certificate — Law Services in Branford, CT" data-src="https://lirp.cdn-website.com/7242d654/dms3rep/multi/opt/Training-1920w.jpg" id="1467253634" class="" onerror="handleImageLoadError(this)"></a>
-</div>
- <div class="caption-container" style="display:none" id="1628837642"> <span class="caption-inner" id="1335652370"> <h3 class="caption-title" id="1453867146"></h3>
- <div class="caption-text" id="1712685175"></div>
- <a class="caption-button dmWidget clearfix" id="1766273763"> <span class="iconBg" id="1338481680"> <span class="icon hasFontIcon icon-star" id="1834023936"></span>
-</span>
- <span class="text" id="1904507081">Button</span>
-</a>
-</span>
-</div>
-</li>
-</ul>
- <div class="photoGalleryViewAll link" isall="true" data-viewall="View more" data-viewless="View less" style="display:none;" id="1814241434"></div>
- <li class="photoGalleryThumbs" id="1973056796"> <div class="image-container" id="1218907453"> <a data-dm-multisize-attr="href" data-image-url="https://irp-cdn.multiscreensite.com/7242d654/dms3rep/multi/1Now+offering+security+guard+classes.png" id="1844143659"><img irh="" irw="" alt="" data-src="https://lirp.cdn-website.com/7242d654/dms3rep/multi/opt/1Now+offering+security+guard+classes-1920w.png" id="1475751970" onerror="handleImageLoadError(this)"></a>
-</div>
- <div class="caption-container" style="display:none" id="1708864058"> <span class="caption-inner" id="1285751043"> <h3 class="caption-title" id="1049619736"></h3>
- <div class="caption-text" id="1694709733"></div>
- <a class="caption-button dmWidget clearfix" id="1993559620"> <span class="iconBg" id="1760132476"> <span class="icon hasFontIcon icon-star" id="1612786953"></span>
-</span>
- <span class="text" id="1575995932">Button</span>
-</a>
-</span>
-</div>
-</li>
-</div>
-</div>
-</div>
-</div>
- <div class="dmRespRow u_1680975863" id="1680975863"> <div class="dmRespColsWrapper" id="1730371480"> <div class="dmRespCol large-12 medium-12 small-12" id="1891531341"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1715762916" style="transition: opacity 1s ease-in-out 0s;"> <h2 class="text-align-center"><span style="display: initial;">Guard Card Training</span></h2>
-</div>
- <div class="dmRespRow u_1992501399" id="1992501399"> <div class="dmRespColsWrapper" id="1489718352"> <div class="u_1289394472 dmRespCol small-12 large-4 medium-4" id="1289394472"> <div class="u_1921793629 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1921793629" editablewidget="true"> <a id="1824545520"><img src="https://lirp.cdn-website.com/7242d654/dms3rep/multi/opt/Ad1-279w.jpg" alt="" id="1048505104" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/7242d654/dms3rep/multi/Ad1.jpg" onerror="handleImageLoadError(this)" width="232.96875" height="232.96875"></a>
-</div>
-</div>
- <div class="u_1791546224 dmRespCol small-12 large-4 medium-4" id="1791546224"> <div class="dmNewParagraph u_1474526828" data-element-type="paragraph" data-version="5" id="1474526828" style="transition: opacity 1s ease-in-out 0s; text-align: left; display: block;"><p class="m-size-17 text-align-center size-24"><span class="m-font-size-17 font-size-24" style="font-weight: bold; display: initial;">Be a Security Officer in 8 hours</span></p><p class="m-size-17 text-align-center size-24"><span class="m-font-size-17 font-size-24" style="font-weight: bold; display: initial;">Weekly Classes</span></p><p class="m-size-17 text-align-center size-24"><span class="m-font-size-17 font-size-24" style="font-weight: bold; display: initial;">Schedule Yours Today</span></p><p class="m-size-17 text-align-center size-24"><span class="m-font-size-17 font-size-24" style="font-weight: bold; display: initial;"><span class="m-font-size-17 font-size-24" style="font-weight: bold; display: initial;">Call</span>
-</span><a href="tel:(203) 687-3878" runtime_url="tel:(203) 687-3878" type="call" class="m-font-size-17 font-size-24" style="font-weight: bold; display: initial;">(203) 687-3878</a></p><p class="m-size-17 text-align-center size-24"><span class="m-font-size-17 font-size-24" style="font-weight: bold; display: initial;"><span class="m-font-size-17 font-size-24" style="font-weight: bold; display: initial;">Instructor: Vincent Riccio</span>
-</span></p><p class="m-size-17 text-align-center size-24"><span class="m-font-size-17 font-size-24" style="font-weight: bold; display: initial;">CT Lic 14– 0501</span></p></div>
-</div>
- <div class="u_1805935108 dmRespCol small-12 large-4 medium-4" id="1805935108"> <div class="u_1112510774 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1112510774" editablewidget="true"> <a id="1447220045"><img src="https://lirp.cdn-website.com/7242d654/dms3rep/multi/opt/G1-363w.png" alt="" id="1747463246" class="" data-dm-image-path="https://irp-cdn.multiscreensite.com/7242d654/dms3rep/multi/G1.png" onerror="handleImageLoadError(this)" width="302.984375" height="241.75"></a>
-</div>
-</div>
-</div>
-</div>
- <div class="dmRespRow u_1310356783" id="1310356783"> <div class="dmRespColsWrapper" id="1032904403"> <div class="dmRespCol large-12 medium-12 small-12" id="1146707699"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1129902457" style="transition: opacity 1s ease-in-out 0s;"><p class="size-18 m-size-13"><span class="font-size-18 m-font-size-13" style="display: initial;"><span style="display: initial;" class="font-size-18 m-font-size-13">Vincent has been an advocate for security training for years and writing many</span>
-</span></p><p class="size-18 m-size-13"><span style="display: initial;" class="font-size-18 m-font-size-13">articles on the subject</span></p><p><span style="display: initial;" class="font-size-18 m-font-size-13">&nbsp;</span></p><p class="size-18 m-size-13"><span style="display: initial;" class="font-size-18 m-font-size-13">Forum: Time for Connecticut to increase security training standards – New Haven Register Jan. 12, 2014</span></p><p><span style="display: initial;" class="font-size-18 m-font-size-13">&nbsp;</span></p><p class="size-18 m-size-13"><span class="font-size-18 m-font-size-13" style="display: initial;"><span style="display: initial;" class="font-size-18 m-font-size-13">Forum: Security training bill moves Connecticut into 21st century – New Haven</span>
-</span></p><p class="size-18 m-size-13"><span style="display: initial;" class="font-size-18 m-font-size-13">Register April 5, 2015</span></p><p><span style="display: initial;" class="font-size-18 m-font-size-13">&nbsp;</span></p><p><br></p><p class="size-18 m-size-13"><span class="font-size-18 m-font-size-13" style="display: initial;"><span style="display: initial;" class="font-size-18 m-font-size-13">This is the required official State of CT course that must be completed by applicants for a security guard identification card. The course is taught by a state-approved</span>
-</span></p><p class="size-18 m-size-13"><span style="display: initial;" class="font-size-18 m-font-size-13">instructor and covers such topics as Criminal Justice, Basic First Aid, Use of Force, and other related subjects relevant to security. Students will not be certified in First Aid or CPR. The class is primarily lecture based with time for breaks. The total course length is 8 hours. An exam is administered that students must pass. Adequate time for review and questions will be provided.</span></p><p><span style="display: initial;" class="font-size-18 m-font-size-13">&nbsp;</span></p><p class="size-18 m-size-13"><span style="display: initial;" class="font-size-18 m-font-size-13">Additional fees and requirements apply at the time of submitting your application to the State. These fees and other items will be discussed in class by the instructor and are NOT due during the class. Students should bring note taking materials such as pen and paper.</span></p></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
- <div class="dmRespRow" id="1592232980"> <div class="dmRespColsWrapper" id="1453322665"> <div class="dmRespCol empty-column large-12 medium-12 small-12" id="1028878080"></div>
-</div>
-</div>
- <div class="u_1608401288 dmRespRow running-animation-TPKTPRYL" id="1608401288" data-anim-desktop="fadeInUp" style="visibility: hidden; opacity: 1; transform: translate3d(0%, 0%, 0px); transition-delay: unset !important; transition-duration: unset !important; animation-delay: unset !important; animation-duration: unset !important; transition-property: none !important;"> <div class="dmRespColsWrapper" id="1857689164"> <div class="dmRespCol small-12 medium-12 large-12" id="1372327688"> <div class="u_1965371220 dmRespRow" id="1965371220"> <div class="dmRespColsWrapper" id="1795730299"> <div class="u_1981086988 dmRespCol small-12 medium-12 large-12" id="1981086988"> <h2 class="u_1653760342 dmNewParagraph" data-element-type="paragraph" id="1653760342" style="transition: none 0s ease 0s; display: block;"><font style="">Give us a Call Today, and Let us Help Your Case!</font></h2> <div class="u_1154939264 graphicWidget" data-element-type="graphic" data-widget-type="graphic" id="1154939264"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1792" id="1209673321" class="svg u_1209673321" data-icon-name="fa-hand-o-up" data-hover-effect="float"> <path fill="inherit" d="M1280 1600q0-26-19-45t-45-19-45 19-19 45 19 45 45 19 45-19 19-45zM1408 836q0-189-167-189-26 0-56 5-16-30-52.5-47.5t-73.5-17.5-69 18q-50-53-119-53-25 0-55.5 10t-47.5 25v-331q0-52-38-90t-90-38q-51 0-89.5 39t-38.5 89v576q-20 0-48.5-15t-55-33-68-33-84.5-15q-67 0-97.5 44.5t-30.5 115.5q0 24 139 90 44 24 65 37 64 40 145 112 81 71 106 101 57 69 57 140v32h640v-32q0-72 32-167t64-193.5 32-179.5zM1536 831q0 133-69 322-59 164-59 223v288q0 53-37.5 90.5t-90.5 37.5h-640q-53 0-90.5-37.5t-37.5-90.5v-288q0-10-4.5-21.5t-14-23.5-18-22.5-22.5-24-21.5-20.5-21.5-19-17-14q-74-65-129-100-21-13-62-33t-72-37-63-40.5-49.5-55-17.5-69.5q0-125 67-206.5t189-81.5q68 0 128 22v-374q0-104 76-180t179-76q105 0 181 75.5t76 180.5v169q62 4 119 37 21-3 43-3 101 0 178 60 139-1 219.5 85t80.5 227z" id="1017798747"></path>
-</svg>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
- <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="u_1382732884 dmRespRow" id="1382732884"> <div class="dmRespColsWrapper" id="1420466381"> <div class="dmRespCol large-12 medium-12 small-12" id="1952979084"> <nav class="u_1543412194 effect-border main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_6" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1543412194" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul class="unifiednav__container  " data-auto="navigation-pages"> <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item   dmUDNavigationItem_00 currentPage dmNavItemSelected" target="" data-target-page-alias="" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
-         Home
-        " data-auto="page-text-style">Home<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-about' %}" class="unifiednav__item  dmUDNavigationItem_010101627085" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         About Us
-        " data-auto="page-text-style">About Us<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-testimonials' %}" class="unifiednav__item  dmUDNavigationItem_010101874136" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         Testimonials
-        " data-auto="page-text-style">Testimonials<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-services' %}" class="unifiednav__item  dmUDNavigationItem_010101896691" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         Private Investigator Services
-        " data-auto="page-text-style">Private Investigator Services<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="{% url 'blog-references' %}" class="unifiednav__item  dmUDNavigationItem_010101934158" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         References
-        " data-auto="page-text-style">References<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
- <li class="unifiednav__item-wrap" data-auto="more-pages" data-depth="0"> <a href="/{% url 'blog-contact_us' %}" class="unifiednav__item  dmUDNavigationItem_010101445598" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
-         Contact Us
-        " data-auto="page-text-style">Contact Us<span class="icon icon-angle-down"></span>
-</span>
-</a>
-</li>
-</ul>
-</nav>
- <div class="u_1688095496 dmNewParagraph" data-element-type="paragraph" id="1688095496" style="transition: opacity 1s ease-in-out 0s;"><font style="color: rgb(169, 169, 169);"><font style="" class="font-size-14 lh-1">Address:</font></font>
-<font style="color: rgb(169, 169, 169);" class="font-size-14 lh-1">40 North East Industrial Road, Floor #2, Branford, Connecticut</font>
-<font style="color: rgb(169, 169, 169);" class="font-size-14 lh-1">Email:</font> <font style="color: rgb(169, 169, 169);" class="font-size-14 lh-1"><a href="mailto:viglioneinvestigations@yahoo.com" runtime_url="mailto:viglioneinvestigations@yahoo.com"><b><i style="" class="lh-1 font-size-14">viglioneinvestigations@yahoo.com</i></b></a>
-|</font>
-<font style="color: rgb(169, 169, 169);" class="font-size-14 lh-1">Fax:</font>&nbsp;<font style=""><font style="color: rgb(44, 168, 246);"><b>(</b></font><font style=""><b><span style="" class="font-size-14 lh-1"><i style=""><font style="color: rgb(44, 168, 246);"><font style="">203)</font><font style="">481-1668</font></font></i></span><font style="color: rgb(15, 123, 111);">&nbsp;</font></b></font></font><font style="color: rgb(169, 169, 169);" class="font-size-14 lh-1">|</font>
-<font style="color: rgb(169, 169, 169);" class="font-size-14 lh-1">Phone:</font> <font style="color: rgb(169, 169, 169);" class="font-size-14 lh-1"><a href="tel:(203) 871-9742" runtime_url="tel:(203) 871-9742"><b><i>(203) 871-9742</i></b></a></font></div> <div class="u_1533026093 default dmHoursOfOperation" id="1533026093" dmle_extension="open_hours" data-element-type="open_hours" time_format="12" wr="true" displaytitle="true" forcedisplay="false" icon="true" surround="true" adwords="" editablewidget="true" data-widget-type="hoursOfOperation" lang=""> <h3 class="dmwidget-title ">Hours of Operation</h3>
- <dl class="open-hours-data"> <div class="open-hours-item"> <dt day="0">Mon - Fri</dt>
- <dd> <time>9:00 am</time>
-- <time>5:00 pm</time>
-</dd>
-</div>
- <div class="open-hours-item"> <dt day="5">Sat - Sun</dt>
- <dd>Closed</dd>
-</div>
-</dl>
-</div>
- <div class="dmNewParagraph" data-element-type="paragraph" id="1894540117" style="text-align: center; transition: opacity 1s ease-in-out 0s;"><font style="color: rgb(168, 168, 168);" class="font-size-14 lh-1">Services available 24/7</font></div> <div class="u_1953569690 widget-b80a9d dmCustomWidget" data-lazy-load="true" id="1953569690" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="b80a9dfa6b544a12aea2a86f748d9032" data-widget-version="15" data-widget-config="eyJjYXJkTGlzdCI6W3sicGF5bWVudE1ldGhvZCI6IjFfdmlzYSJ9LHsicGF5bWVudE1ldGhvZCI6IjJfbWFzdGVyX2NhcmQifSx7InBheW1lbnRNZXRob2QiOiI0X2FtZXJpY2FuX2V4cHJlc3MifV0sIm5ld0xvZ29zIjp0cnVlLCJkaXJHcm91cCI6bnVsbCwiYWxpZ24iOiJjZW50ZXIiLCJjaGVja2JveFNpemVzIjpudWxsLCJkaXJlY3Rpb24iOiJyb3ciLCJncm91cDEiOm51bGx9"> <div class="cardList row center"> <div class="cardItem" style="max-width:56px !important;max-height:37px !important;"><img src="https://cdn.website.thryv.com/-resellers-preview/_widget_builder_files/visa.png" alt="Visa Payment Accepted" onerror="handleImageLoadError(this)"></div>
- <div class="cardItem" style="max-width:56px !important;max-height:37px !important;"><img src="https://cdn.website.thryv.com/-resellers-preview/_widget_builder_files/mastercard.png" alt="MasterCard Payment Accepted" onerror="handleImageLoadError(this)"></div>
- <div class="cardItem" style="max-width:56px !important;max-height:37px !important;"><img src="https://cdn.website.thryv.com/-resellers-preview/_widget_builder_files/amex.png" alt="American Express Payment Accepted" onerror="handleImageLoadError(this)"></div>
-</div>
-</div>
- <div class="u_1388822725 align-center text-align-center dmSocialHub" id="1388822725" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv "> <a href="https://facebook.com/pages/category/Advertising-Marketing/Private-criminal-defense-investigations-1134345970053033/" target="_blank" dm_dont_rewrite_url="true" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event('socialLink', 'click', 'Facebook')"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style6" data-hover-effect=""></span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
- <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+ </div>
 
+<div id = "div_position_misc">
+<h4>About:</h4>
     </div>
 
-<!-- Google Fonts Include -->
+<p>
+ Viglione Investigations is your preferred private investigator serving all CT. Sal Viglione is a retired police officer with the New Haven police department who oversees and assist clients to win their cases. As licensed investigators, we respect your need for a private investigator and handle your case with the utmost care and discretion.  With over 25 years of experience,
+ Salvatore Viglione has the insight for what happens in proceedings and what effects sloppy police work can have on a falsely accused perpetrator.
+</p>
 
-<link rel="stylesheet" href="https://irp.cdn-website.com/fonts/css?family=Roboto:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Montserrat:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Cabin:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Lato:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Pacifico:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Source+Sans+Pro:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic|Open+Sans:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic&amp;subset=latin-ext&amp;display=swap" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
+<p2>
+ Viglione Investigations specializes in criminal defense cases specializing in habeas corpus, indigent, court appointed,
+ conflict and ex parte cases. Salvatore Viglione is a vendor for the Connecticut Public Defenders office.
+ We also handle all types of business and personal fraud and litigation services,
+ but we are well suited to handle any type of investigation from simple surveillance investigations
+ to more complex fraud and embezzlement cases.</p2>
 
-<!-- RT CSS Include d-css-runtime-desktop-one-package-new-->
-<link rel="stylesheet" as="style" fetchpriority="low" onload="loadCSS(this)" href="https://static.cdn-website.com/mnlt/production/2568/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-new.min.css" type="text/css">
+<br><br>
 
-<!-- End of RT CSS Include -->
+<p3>
+ We are very meticulous with all our services and if the client qualifies, the state may pay for their services and pay the fees of the attorney and the investigator (although private cases require a retainer). Expert witness statements, photographs, and videos can be taken to help solidify and win your case!
+</p3>
 
-       <link rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/production_2568/35239c7216d5214453f59779bb1e101e.css" id="widgetCSS" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
+<br><br>
 
-<!-- Support `img` size attributes -->
-<style>img[width][height] {height: auto;}</style>
+<img src="static/images/Fueled.jpg"
+width="1600"
+     height="500"/>
 
-<!-- Support showing sticky element on page only -->
-<style>
-    body[data-page-alias="home"] #dm [data-show-on-page-only="home"]{
-        display: block !important;
-    }
-</style>
+<div id = "div_position_misc">
+<h4>Our Services Include:</h4>
+        </div>
 
-<!-- This is populated in Ajax navigation -->
-<style id="pageAdditionalWidgetsCss" type="text/css">
-</style>
+<ul id = "services_list">
+  <li>Complete compressive background reports</li>
+  <li>Infidelity cases</li>
+  <li>Divorce cases and disputes</li>
+    <li>Child custody and visitation cases</li>
+    <li>Surveillance and tailing cases</li>
+    <li>Locates</li>
+    <li>Missing persons</li>
+    <li>Property & asset checks</li>
+    <li>Worker Compensation cases</li>
+    <li>Slip & fall cases</li>
+    <li>Conflict & Ex parte cases</li>
+    <li>Vendor for the CT Chief Public Defenders Dept. Vendor # 145377</li>
+    <li>Hablamos español</li>
+</ul>
 
-<!-- Site CSS -->
-<link rel="stylesheet" href="https://irp.cdn-website.com/7242d654/files/7242d654_1.min.css?v=36" id="siteGlobalCss" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
+<br>
 
-<style id="customWidgetStyle" type="text/css">
+<div id = "div_position_misc">
+<h4>Timeline of merits:</h4>
+        </div>
 
-</style>
-<style id="innerPagesStyle" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-</style>
+    <!-- cdn font vazir -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/font-face.css">
+<!-- style  -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <section class="questions">
+        <!-- questions -->
+        <div class="section-center">
+          <!-- single question -->
+          <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>1.) 1983-1987</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+            (4 years) University Of New Haven. Studied criminal justice and awarded Certificate Of Achievement in Security Management on May 8,1987.
+              </p>
+              <a href="#"></a>
+            </div>
+          </article>
+          <!-- end of single question -->
+          <!-- single question -->
+          <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  2.) Jan 19,1984
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Awarded martial arts 1st degree black belt and instructor certificate in Tae-Kwon-Do.
+              </p>
+              <a href="#">
+              </a>
+            </div>
+          </article>
+          <!-- end of single question -->
+          <!-- single question -->
+          <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>3.) 1989</p>
+              <!-- button -->
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Authored book "In Search of Biblical Gods". Published by Vantage Press, Inc. Library of Congress # 88-090150
+              </p>
+              <a href="#"></a>
+            </div>
+          </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  4.) Jan 6,1986
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                   Accepted into New Haven Police Academy and graduated on June 19, 1986
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  5.) March 21, 1986
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Awarded Marksman Certificate from New Haven Police Academy
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  6.) March 31,1987
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received letter of recognition from the Crime Prevention Unit at New Haven Police Department
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  7.) Oct.7, 1987
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received Chief's Award of Merit at New Haven Police Department
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  8.) June 6, 1988
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received Certificate of Commendation for Effective Police Work from New Haven Police Department
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  9.) April 25, 1989
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received Chief's Award of Merit at New Haven Police Department
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  10.) May 11, 1989
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received Chief's Award of Merit at New Haven Police Department
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  11.)  October 30, 1989
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                   Received letter of recognition from Awards Committee at New Haven Police Department
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  12.) April 12, 1990
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received Certificate of Commendation from Patrol Division at New Haven Police Department
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  13.) August 26, 1991
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+            Received letter of recognition and appreciation from business owner of flea market
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  14.) May 6, 1992
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received letter of recognition of helping maintain peace and security from New Haven Police Department
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  15.) July 1, 1992
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+            Received letter of recognition from New Haven Police Department
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  16.) April 12, 1993
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received Division Training Certificate for review & evaluation accomplishments from New Haven Police Department
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  17.) July 6, 1994
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received letter of recognition from New Haven Police Department regarding fireworks display on July 4, 1994.
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  18.) July 20, 1994
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+        Received letter of recognition from New Haven Police Department for CT Motorcycle Run
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  19.) September 28, 1994
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+        Letter of merit from Board of Police Commissioners at New Haven Police Department regarding the apprehension of two armed suspects (robbery).
+                  Award emphasizes sound judgement and proper utilization of police tactics.
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  20.) November 4, 1994
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+        Chief's Award of Merit for outstanding accomplishment of improved operations contributing to a more effective police service.
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  21.) October 8th, 1994
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+            Chief's Award of Merit
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  22.) September 17, 1996
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received Unit Citation Certificate for Field Training Officer Program
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  23.) November 6, 1996
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Received Chief's Award of Merit
+              </p>
+              </a>
+            </div>
+      </section>
+    </main>
+    <!-- javascript -->
+    <script src="static/js/accordion.js"></script>
+  </body>
+<br>
 
-<style id="additionalGlobalCss" type="text/css">
-</style>
+<footer>
+  <i>Services available 24/7!</i><br>
+  <img src="/static/images/clock.png" style="width:42px;height:42px;">
+  <p>Send email:<br>
+  <a href="viglioneinvestigations@yahoo.com">viglioneinvestigations@yahoo.com</a></p>
+    <p>Call now (203) 871-9742:<br></p>
+    <a href="tel:203-871-9742"><img src="/static/images/phone.png" style="width:42px;height:42px;"></a>
+    <p>Fax # (203) 481-1668:<br></p>
+    <a href="Fax # (203) 481-1668"><img src="/static/images/fax.png" style="width:42px;height:42px;"></a><br>
+    <p>Facebook page:<br></p>
+    <a href="https://www.facebook.com/Private-criminal-defense-investigations-1134345970053033/"><img src="/static/images/facebook.png" style="width:42px;height:42px;"></a>
+</footer>
 
-<!-- Page CSS -->
-<link rel="stylesheet" href="https://irp.cdn-website.com/7242d654/files/7242d654_home_1.min.css?v=36" id="homeCssLink" as="style" fetchpriority="low" onload="loadCSS(this)" type="text/css">
-
-<style id="pagestyle" type="text/css">
-
-</style>
-
-<style id="pagestyleDevice" type="text/css">
-
-</style>
-
-<!-- Flex Sections CSS -->
-
-    <style id="globalFontSizeStyle" type="text/css">
-        .font-size-36, .size-36, .size-36 > font { font-size: 36px !important; }.font-size-36, .size-36, .size-36 > font { font-size: 36px !important; }.font-size-40, .size-40, .size-40 > font { font-size: 40px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-36, .size-36, .size-36 > font { font-size: 36px !important; }.font-size-36, .size-36, .size-36 > font { font-size: 36px !important; }.font-size-40, .size-40, .size-40 > font { font-size: 40px !important; }.font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-36, .size-36, .size-36 > font { font-size: 36px !important; }.font-size-40, .size-40, .size-40 > font { font-size: 40px !important; }.font-size-25, .size-25, .size-25 > font { font-size: 25px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-16, .size-16, .size-16 > font { font-size: 16px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-21, .size-21, .size-21 > font { font-size: 21px !important; }.font-size-15, .size-15, .size-15 > font { font-size: 15px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-17, .size-17, .size-17 > font { font-size: 17px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-13, .size-13, .size-13 > font { font-size: 13px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }
-    </style>
-    <style id="pageFontSizeStyle" type="text/css">
-    </style>
-
-<div id="fb-root" data-locale="en"></div>
-<!-- Alias: 7242d654 -->
-<div class="dmPopupMask" id="dmPopupMask"></div>
-<div id="dmPopup" class="dmPopup">
-	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
- 	<div class="dmPopupTitle"> <span></span> Share by:</div>
-	<div class="data"></div>
-
-	{% endblock %}
-    </div>
-
-</body>
 </html>
