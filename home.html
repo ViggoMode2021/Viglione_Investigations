@@ -145,6 +145,12 @@ font-family: courier;
 font-size: 30px;
 }
 
+h6{
+color: blue;
+font-family: courier;
+font-size: 15px;
+}
+
 #address_link_text{
 color: white;
 text-decoration: none;
@@ -893,6 +899,11 @@ width="1600"
     <a href="Fax # (203) 481-1668"><img src="/static/images/fax.png" style="width:42px;height:42px;"></a><br>
     <p>Facebook page:<br></p>
     <a href="https://www.facebook.com/Private-criminal-defense-investigations-1134345970053033/"><img src="/static/images/facebook.png" style="width:42px;height:42px;"></a>
+  <hr class="solid">
+  <h6><a href="/">Home</a></h6>
+  <h6><a href="{% url 'blog-testimonials' %}">Testimonials</a></h6>
+  <h6><a href="{% url 'blog-references' %}">References</a></h6>
+  <h6><a href="{% url 'blog-pay_invoice' %}">Pay Invoice</a></h6>
 </footer>
-
+</div>
 </html>
