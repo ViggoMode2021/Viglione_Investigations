@@ -275,14 +275,10 @@ footer {
 }
 
 </style>
-</head>
-
-</style>
-  <head>
+ <head>
     <link rel="stylesheet" href="R">
     <title>Viglione Investigations - Home</title>
   </head>
-  <body>
 <nav>
         <div class="logo">Viglione Investigations</div>
         <input type="checkbox" id="checkbox">
@@ -290,7 +286,8 @@ footer {
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </label>
         <ul>
-            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/" class="active">Home</a>
+</li>
             <li><a href="{% url 'blog-testimonials' %}">Testimonials</a></li>
             <li><a href="{% url 'blog-references' %}">References</a></li>
             <li><a href="https://viglioneinvestigations.s3.amazonaws.com/Venmo.jpg">Pay Invoice (Venmo)</a></li>
@@ -972,7 +969,8 @@ width="1400"
   <h6><a href="/">Home</a></h6>
   <h6><a href="{% url 'blog-testimonials' %}">Testimonials</a></h6>
   <h6><a href="{% url 'blog-references' %}">References</a></h6>
-  <h6><a href="{% url 'blog-pay_invoice' %}">Pay Invoice</a></h6>
+  <h6><a href="https://viglioneinvestigations.s3.amazonaws.com/Venmo.jpg">Pay Invoice (Venmo)</a></h6>
+  <h6><a href="https://www.paypal.com/paypalme/Ctl2473V">Pay Invoice (PayPal)</a></h6>
 </footer>
 </div>
 </html>
