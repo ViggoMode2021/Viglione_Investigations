@@ -15,3 +15,9 @@ def references(request):
 #Spanish pages
 def home_spanish(request):
     return render(request, 'blog/home_spanish.html', {'title': 'Home - Spanish'})
+
+def testimonials_spanish(request):
+    return render(request, 'blog/testimonials_spanish.html', {'title': 'Testimonials - Spanish'})
+
+def references_spanish(request):
+    return render(request, 'blog/references_spanish.html', {'title': 'References - Spanish'})
