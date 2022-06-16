@@ -298,7 +298,7 @@ footer {
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </label>
         <ul>
-            <li><a href="/" class="active">Página Principal</a>
+            <li><a href="{% url 'blog-home_spanish' %}" class="active">Página Principal</a>
 </li>
             <li><a href="{% url 'blog-testimonials_spanish' %}">Testimoniales</a></li>
             <li><a href="{% url 'blog-references_spanish' %}">Referencias</a></li>
@@ -315,16 +315,18 @@ footer {
 	<div class="container">
         <ul class="grid-testimonials">
             <li>
-                <div><p>"They treat the clients with professionalism, understanding, compassion. Their vast skills in criminal matters is impressive. They also have personnel that speak Spanish."
+                <div><p>"Ellos son profesionales y tratan los clientes con comprensión y compasión. Sus habilidades amplias con justicia penal es
+                    impresionante. También tienen empleados que hablan español."
 </p><span class="quote-arrow"></span></div>
                 <span class="grid-testimonials-citation">Lupe L</span>
             </li>
             <li>
-                <div><p>"Always helping the innocent little guy and preventing the great sharks of the system from unfairly devouring them because of unfair biases and dislikes."</p><span class="quote-arrow"></span></div>
+                <div><p>"Siempre ayudan a los inocentes a prevenir los tiburones del sistema aprovechar los casos y manipular
+                    los resultados."</p><span class="quote-arrow"></span></div>
                 <span class="grid-testimonials-citation">Denise R</span>
             </li>
             <li>
-                <div><p>"Viglione Investigations took the time to handle my case and went above and beyond. Top quality."</p><span class="quote-arrow"></span></div>
+                <div><p>"Viglione Investigations trabajaron con paciencia y cuidado conmigo. Pasaron por encima con la calidad más alta."</p><span class="quote-arrow"></span></div>
                 <span class="grid-testimonials-citation">Christopher D</span>
             </li>
           </div>
@@ -332,18 +334,18 @@ footer {
 <div class="container">
         <ul class="grid-testimonials">
             <li>
-                <div><p>"I used Viglione Investigations for help with a lawsuit.
-                  He was very professional and his prices were very reasonable. I would recommend him to anyone."
+                <div><p>"Yo usé Viglione Investigations porque necesité ayuda con una demanda. Él es muy profesional y sus precios son razonables.
+                    Se lo recomendaría a cualquier persona."
                 </p><span class="quote-arrow"></span></div>
                 <span class="grid-testimonials-citation">Karen H</span>
             </li>
             <li>
-                <div><p>"Sal Viglione and his staff are the most professional and thorough investigative team I know. I have been working with Sal for almost 10 years. He is the best!"
+                <div><p>"Sal Viglione y su personal son el mejor equipo de investigadores que conozco. Llevo 10 años trabajando con Sal. ¡Es el mejor!"
 </p><span class="quote-arrow"></span></div>
                 <span class="grid-testimonials-citation">Sue S</span>
             </li>
             <li>
-                <div><p>"Excellent investigator. Does an honest and thorough job and leaves no stone unturned. Great to work with."</p><span class="quote-arrow"></span></div>
+                <div><p>"Investigador excelente. Hace un trabajo a fondo y honesto. Excelente con quien trabajar."</p><span class="quote-arrow"></span></div>
                 <span class="grid-testimonials-citation">Anthony J</span>
             </li>
           </div>
@@ -351,16 +353,17 @@ footer {
 <div class="container">
         <ul class="grid-testimonials">
             <li>
-                <div><p>"My case was resolved, and I received the information necessary to win my court case.
-                  My attorney referred me to this gentleman."</p><span class="quote-arrow"></span></div>
+                <div><p>"Mi caso fue resuelto, y recibí la información correcta para ganar mi caso.
+                  Mi abogado me lo recomendó."</p><span class="quote-arrow"></span></div>
                 <span class="grid-testimonials-citation">Lisa H</span>
             </li>
             <li>
-                <div><p>"I hired Viglione Investigations less than a year ago and was extremely happy with my overall experience. I would recommend him to family and friends."</p><span class="quote-arrow"></span></div>
+                <div><p>"Contraté a Viglione Investigations hace menos de un año y estaba muy feliz con
+                    mi experiencia completa. Se lo recomendaría a mis amigos y familia"</p><span class="quote-arrow"></span></div>
                 <span class="grid-testimonials-citation">Hugh J</span>
             </li>
             <li>
-                <div><p>"Excellent work! A modern day Sherlock Holmes and great rates too!"</p><span class="quote-arrow"></span></div>
+                <div><p>"¡Trabajo excelente! Un Sherlock Holmes moderno y tiene buenos precios también!"</p><span class="quote-arrow"></span></div>
                 <span class="grid-testimonials-citation">Ma M</span>
             </li>
         </ul>
@@ -380,7 +383,7 @@ footer {
     <p>Facebook:<br></p><br><br>
     <a href="https://www.facebook.com/Private-criminal-defense-investigations-1134345970053033/"><img src="/static/images/facebook.png" style="width:42px;height:42px;"></a><br><br>
   <hr class="solid"><br><br>
-  <h6><a href="/">Página Principal</a></h6><br><br>
+  <h6><a href="{% url 'blog-home_spanish' %}">Página Principal</a></h6><br><br>
   <h6><a href="{% url 'blog-testimonials_spanish' %}">Testimoniales</a></h6><br><br>
   <h6><a href="{% url 'blog-references_spanish' %}">Referencias</a></h6><br><br>
   <h6><a href="https://viglioneinvestigations.s3.amazonaws.com/Venmo.jpg">Pagar (Venmo)</a></h6><br><br>
