@@ -183,9 +183,19 @@ font-family: courier;
 font-size: 15px;
 }
 
+h7{
+color: yellow;
+font-family: courier;
+font-size: 25px;
+}
+
 i{
   color: black;
   font-size: 20px;
+}
+
+a {
+text-decoration:none;
 }
 
 #address_link_text{
@@ -384,6 +394,7 @@ footer {
   <h6><a href="{% url 'blog-references' %}">References</a></h6><br><br>
   <h6><a href="https://viglioneinvestigations.s3.amazonaws.com/Venmo.jpg">Pay Invoice (Venmo)</a></h6><br><br>
   <h6><a href="https://www.paypal.com/paypalme/Ctl2473V">Pay Invoice (PayPal)</a></h6><br><br>
+    <a href="{% url 'blog-testimonials_spanish' %}"><img src="https://imgs.search.brave.com/eXxv3HDY4_ZXV3fclTODesLMisl4h86H2hvM52yHLA8/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC9UeW5XdEVK/LmpwZw" style="width:20px;height:20px;"></a><h7> ← </h7><h5>Ver en español</h5>
 </footer>
 </div>
 </html>

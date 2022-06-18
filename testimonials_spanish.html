@@ -17,6 +17,10 @@ body {
   background: #132a13;
 }
 
+a {
+text-decoration:none;
+}
+
 /* Start Main Css */
 
 * {
@@ -181,6 +185,12 @@ h6{
 color: blue;
 font-family: courier;
 font-size: 15px;
+}
+
+h7{
+color: yellow;
+font-family: courier;
+font-size: 25px;
 }
 
 i{
@@ -388,6 +398,8 @@ footer {
   <h6><a href="{% url 'blog-references_spanish' %}">Referencias</a></h6><br><br>
   <h6><a href="https://viglioneinvestigations.s3.amazonaws.com/Venmo.jpg">Pagar (Venmo)</a></h6><br><br>
   <h6><a href="https://www.paypal.com/paypalme/Ctl2473V">Pagar (PayPal)</a></h6><br><br>
+      <a href="{% url 'blog-testimonials' %}"><img src="https://imgs.search.brave.com/HconjuCvmgYmYiVt652PNajgLpCmC_bhlWXg1bSpY8U/rs:fit:766:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5L/V2dkQW1ZTmdHVWx0/bXFQZUFQZF9RSGFF/bCZwaWQ9QXBp" style="width:20px;height:20px;"><h7> ← </h7></a><h5>See page in English</h5>
+
 </footer>
 </div>
 </html>

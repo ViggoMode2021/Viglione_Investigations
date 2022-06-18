@@ -23,6 +23,10 @@ p {
   padding: 10px;
 }
 
+#fueled {
+  text-align: center;
+  }
+
 i{
   color: black;
   font-size: 20px;
@@ -95,10 +99,6 @@ nav {
     font-size: 22px;
 }
 
-ul {
-    list-style: none;
-}
-
 ul li {
     display: inline-block;
 }
@@ -123,6 +123,10 @@ ul li a.active {
     border-radius: 4px;
     cursor: pointer;
     transition: all .3s ease;
+}
+
+a {
+text-decoration:none;
 }
 
 #icon svg {
@@ -277,6 +281,8 @@ font-size: 20px;
 color: white;
 font-family: times;
 font-size: 25px;
+list-style: none;
+text-align: center;
 }
 
 footer {
@@ -316,7 +322,6 @@ footer {
 <div id = "address_link_position">
 <a id="address_link_text" href="https://www.google.com/maps/place/40+E+Industrial+Rd,+Branford,+CT+06405/@41.299105,-72.755853,17z/data=!3m1!4b1!4m5!3m4!1s0x89e7d4f5460fc6d1:0xc94b72d3a0d204b2!8m2!3d41.299105!4d-72.755853">
  Dirección: 40 North East Industrial Road, Floor #2, Branford, Connecticut, 06405</a>
-</
  </div>
 
 <div id = "div_position_misc">
@@ -344,15 +349,17 @@ footer {
 
 <br><br>
 
+<div id = "fueled">
 <img src="/static/images/Fueled.jpg"
 width="1400"
      height="300"/>
+  </div>
 
 <div id = "div_position_misc">
 <h4>Nuestros servicos incluyen:</h4>
         </div>
 
-<ul id = "services_list">
+<ol id = "services_list">
   <li>Complete compressive background reports</li>
   <li>Casos de infidelidad</li>
   <li>Casos de divorcio</li>
@@ -366,7 +373,7 @@ width="1400"
     <li>Casos de conflicto y ex parte</li>
     <li>Vendedor para el Departamento de CT Chief Public Defenders # 145377</li>
     <li>Hablamos español e inglés</li>
-</ul>
+</ol>
 
 <br>
 
@@ -985,6 +992,7 @@ width="1400"
   <h6><a href="{% url 'blog-references_spanish' %}">Referencias</a></h6>
   <h6><a href="https://viglioneinvestigations.s3.amazonaws.com/Venmo.jpg">Pagar (Venmo)</a></h6>
   <h6><a href="https://www.paypal.com/paypalme/Ctl2473V">Pagar (PayPal)</a></h6>
+    <a href="/"><img src="https://imgs.search.brave.com/HconjuCvmgYmYiVt652PNajgLpCmC_bhlWXg1bSpY8U/rs:fit:766:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5L/V2dkQW1ZTmdHVWx0/bXFQZUFQZF9RSGFF/bCZwaWQ9QXBp" style="width:20px;height:20px;"><h7> ← </h7></a><h5>See page in English</h5>
 </footer>
 </div>
 </html>
