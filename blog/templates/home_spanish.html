@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+<style>
+ /*
+    Colors : #FFB700 , #4A4A4A
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: vazir;
+  background: #132a13;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: #fff;
+  padding: 10px;
+}
+
+#fueled {
+  text-align: center;
+  }
+
+i{
+  color: black;
+  font-size: 20px;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 50px auto 0;
+  max-width: 620px;
+}
+.question {
+  background: #31572c;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.question-title p {
+  color: #ffffff;
+  font-weight: bolder;
+}
+.question-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: #fff;
+}
+
+.question-text {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 5px solid #4f772d;
+}
+
+/* hide text */
+.question-text {
+  display: none;
+}
+.show-text .question-text {
+  display: block;
+}
+.minus-icon {
+  display: none;
+}
+.show-text .minus-icon {
+  display: inline;
+}
+.show-text .plus-icon {
+  display: none;
+}
+
+/* Start Main Css */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5%;
+    align-items: center;
+    background: #18283B;
+}
+
+.logo {
+    color: #FFF;
+    font-size: 22px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #8291A5;
+    padding: 8px 30px;
+    border-radius: 7px;
+    transition: all .3s ease;
+}
+
+ul li a:hover,
+ul li a.active {
+    color: #FFF;
+    background: #0075FF;
+}
+
+#icon {
+    background-color: #0075FF;
+    padding: 5px 7px 3px 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+a {
+text-decoration:none;
+}
+
+#icon svg {
+    color: #FFF;
+    height: 28px;
+    transition: all .3s ease;
+}
+
+#icon:hover {
+    background: #FFF;
+}
+
+#icon:hover svg {
+    color: #0075FF;
+}
+
+#checkbox,
+#icon {
+    display: none;
+}
+/* Youtube link */
+.link {
+    position: fixed;
+    background-color: #D12322;
+    padding: 23px 40px;
+    right: -100px;
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(-90deg);
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .1s ease-in-out;
+}
+
+.link i {
+    padding-left: 7px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        border-bottom: 1px solid #455468;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 71px);
+        background-color: #18283B;
+        left: 0;
+        top: 0;
+        text-align: center;
+        display: none;
+        margin-top: 71px;
+    }
+
+    ul li {
+        display: block;
+        padding: 10px 15px;
+    }
+
+    ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    #icon {
+        display: block;
+    }
+
+    #checkbox:checked~ul {
+        display: block;
+    }
+}
+
+body {background-color: black;}
+
+h1{
+color: white;
+font-family: arial;
+}
+
+h3{
+color: red;
+}
+
+h4{
+color: yellow;
+font-family: courier;
+font-size: 30px;
+}
+
+h5{
+color: yellow;
+font-family: courier;
+font-size: 15px;
+}
+
+h6{
+color: blue;
+font-family: courier;
+font-size: 15px;
+}
+
+h7{
+color: yellow;
+font-family: courier;
+font-size: 25px;
+}
+
+#address_link_text{
+color: white;
+text-decoration: none;
+font-family: lucinda;
+font-size: 20px;
+}
+
+#description_paragraphs{
+margin-left:10px;
+}
+
+#address_link_position{
+text-align: center;
+}
+
+#div_position_misc{
+text-align: center;
+}
+
+p{
+color: white;
+font-family: arial;
+font-size: 20px;
+}
+
+p2{
+color: white;
+font-family: arial;
+font-size: 20px;
+}
+
+p3{
+color: white;
+font-family: arial;
+font-size: 20px;
+}
+
+#services_list{
+color: white;
+font-family: times;
+font-size: 25px;
+list-style: none;
+text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+
+</style>
+ <head>
+    <link rel="stylesheet" href="R">
+    <title>Viglione Investigations - Página Principal</title>
+   <link rel="apple-touch-icon" sizes="180x180" href="/blog/static/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/static/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/static/images/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  </head>
+<nav>
+        <div class="logo">Viglione Investigations</div>
+  <a href="/"><img src="https://imgs.search.brave.com/HconjuCvmgYmYiVt652PNajgLpCmC_bhlWXg1bSpY8U/rs:fit:766:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5L/V2dkQW1ZTmdHVWx0/bXFQZUFQZF9RSGFF/bCZwaWQ9QXBp" style="width:20px;height:20px;"><h7> ← </h7></a><h5>See page in English</h5>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" id="icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </label>
+        <ul>
+            <li><a href="{% url 'blog-home_spanish' %}" class="active">Página Principal</a>
+</li>
+            <li><a href="{% url 'blog-testimonials_spanish' %}">Testimoniales</a></li>
+            <li><a href="{% url 'blog-references_spanish' %}">Referencias</a></li>
+            <li><a href="https://viglioneinvestigations.s3.amazonaws.com/Venmo.jpg">Pagar (Venmo)</a></li>
+            <li><a href="https://www.paypal.com/paypalme/Ctl2473V">Pagar (PayPal)</a></li>
+        </ul>
+    </nav>
+
+<div id = "div_position_misc">
+<h3>Investigador privado ubicado en Branford, Connecticut. ¡Servimos todo Connecticut!</h3>
+</div>
+
+<br>
+<div id = "address_link_position">
+<a id="address_link_text" href="https://www.google.com/maps/place/40+E+Industrial+Rd,+Branford,+CT+06405/@41.299105,-72.755853,17z/data=!3m1!4b1!4m5!3m4!1s0x89e7d4f5460fc6d1:0xc94b72d3a0d204b2!8m2!3d41.299105!4d-72.755853">
+ Dirección: 40 North East Industrial Road, Floor #2, Branford, Connecticut, 06405</a>
+ </div>
+
+<div id = "div_position_misc">
+<h4>Sobre el negocio:</h4>
+    </div>
+
+<p>
+ Viglione Investigations es su investigador privado preferido sirviendo todo CT. Sal Viglione es un policía jubilado del Departamento de Policía de New Haven, CT. Ayuda y atiende a
+  los clientes en cuanto a ganar sus casos en la corte. Respetamos su necesidad por un investigador privado y manejar su caso con el mayor cuidado.
+  Con más de veinticinco años de experiencia, Sal Viglione sabe lo que sucede en las cortes y los efectos de mal trabajo policial.
+</p>
+
+<div id = "description_paragraphs">
+<p2>
+  Viglione Investigations especializa en casos criminales defensivos como: habeas corpus, indigente, apuntado de la corte, conflicto y ex parte.
+  Salvatore Viglione es un vendedor de la Oficina de Defendedores Públicos de Connecticut.
+ También, manejamos todos tipos de servicios en cuanto a fraude personal o negocio.
+ ¡Sin embargo, podemos trabajar con cualquier tipo de investigación!</p2>
+    </div>
+
+<br>
+
+<div id = "description_paragraphs">
+<p3>
+ Prestamos mucha atención a los detalles de los casos. Si el cliente califica, el estado puede pagar por los servicios
+  del investigador y/o el abogado. Casos privados requieren un anticipo. ¡Podemos sacar fotos y videos y tomar declaraciones de testigos para ganar su caso!
+</p3>
+</div>
+
+<br><br>
+
+<div id = "fueled">
+<img src="/static/images/Fueled.jpg"
+width="1400"
+     height="300"/>
+  </div>
+
+<div id = "div_position_misc">
+<h4>Nuestros servicos incluyen:</h4>
+        </div>
+
+<ol id = "services_list">
+  <li>Complete compressive background reports</li>
+  <li>Casos de infidelidad</li>
+  <li>Casos de divorcio</li>
+    <li>Casos de custodia</li>
+    <li>Vigilancia y casos de persecución</li>
+    <li>Encontrar personas</li>
+    <li>Personas desaparecidas</li>
+    <li>Revisiones de la propiedad</li>
+    <li>Casos de compensación para trabajadores</li>
+    <li>Casos de heridos</li>
+    <li>Casos de conflicto y ex parte</li>
+    <li>Vendedor para el Departamento de CT Chief Public Defenders # 145377</li>
+    <li>Hablamos español e inglés</li>
+</ol>
+
+<br>
+
+<div id = "div_position_misc">
+<h4>Línea de tiempo de logros:</h4>
+        </div>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- cdn font vazir -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/font-face.css">
+<!-- style  -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <section class="questions">
+        <!-- questions -->
+        <div class="section-center">
+          <!-- single question -->
+          <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>1.) 1983 - 1987</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+            (4 años) Universidad de New Haven. Estudió justicia penal y logró Certificado de Logro en Gerencia de Seguridad en el ocho de mayo, 1987.
+              </p>
+              <a href="#"></a>
+            </div>
+          </article>
+          <!-- end of single question -->
+          <!-- single question -->
+          <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  2.) El 19 de enero, 1984
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Logró certificado de '1st degree black belt and instructor in Tae-Kwon-Do'
+              </p>
+              <a href="#">
+              </a>
+            </div>
+          </article>
+          <!-- end of single question -->
+          <!-- single question -->
+          <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>3.) 1989</p>
+              <!-- button -->
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Escribió el libro "In Search of Biblical Gods". Publicado por Vantage Press, Inc. Biblioteca de Congreso # 88-090150
+              </p>
+              <a href="#"></a>
+            </div>
+          </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  4.) El 6 de enero,1986
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                   Fue aceptado en la Academia Policial de New Haven y se graduó el diecinueve de junio, 1986
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  5.) El 21 de marzo, 1986
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Logró Certificado de 'Marksman' de la Academia Policial de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  6.) El 31 de marzo, 1987
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió Carta de Reconocimiento de la Unidad de Prevención de Delitos en el Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  7.) El 7 de octubre, 1987
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió 'Chief's Award of Merit' del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  8.) El 8 de junio, 1988
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió Certificado de Elogio del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  9.) El 25 de abril, 1989
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió 'Chief's Award of Merit' del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  10.) El once de mayo, 1989
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió 'Chief's Award of Merit' del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  11.)  El 30 de octubre, 1989
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió Carta de Reconocimiento del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  12.) El 12 de abril, 1990
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió Certificado of Elogio de la División de Patrulla del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  13.) El 26 de agosto, 1991
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+            Recibió Certificado de Elogio del dueño del mercado de pulgas
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  14.) El 6 de mayo, 1992
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió Certificado of Elogio de la División de Patrulla del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  15.) El 1 de julio, 1992
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió Certificado of Elogio de la División de Patrulla del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  16.) El 12 de abril, 1993
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió 'Division Training Certificate' del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                 </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  17.) El seis de julio, 1994
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                   Recibió Certificado of Elogio del Departamento de Policía de New Haven para el evento de fuegos artificiales en el cuatro de julio, 1994
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  18.) El veinte de julio, 1994
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+        Recibió Certificado of Elogio del Departamento de Policía de New Haven para el evento de motocicletas de Connecticut
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  19.) El 28 de septiembre, 1994
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+        Recibió Certificado of Elogio de la Junta de Comisionados de Policía
+                del Departamento de Policía de New Haven por la captura de dos sospechosos armados (robar).
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  20.) El cuatro de noviembre, 1994
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+        Recibió 'Chief's Award of Merit' del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  21.) El 8 de octubre, 1994
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+        Recibió 'Chief's Award of Merit' del Departamento de Policía de New Haven
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  22.) El 17 de septiembre, 1996
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                  Recibió 'Unit Citation Certificate' del Programa de Entrenamientos de Oficiales
+              </p>
+              <a href="#">
+              </a>
+            </div>
+                </article>
+          <!-- end of single question -->
+            <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>
+                  23.) El 6 de noviembre, 1996
+              </p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="fa-solid fa-minus"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+        Recibió 'Chief's Award of Merit' del Departamento de Policía de New Haven
+              </p>
+              </a>
+            </div>
+      </section>
+    </main>
+    <!-- javascript -->
+    <script src="/static/js/accordion.js"></script>
+  </body>
+<br>
+
+<footer>
+  <i>Servicios disponibles 24/7!</i><br>
+  <img src="/static/images/clock.png" style="width:42px;height:42px;">
+  <p>Enviar correo electrónico:<br>
+  <a href="viglioneinvestigations@yahoo.com">viglioneinvestigations@yahoo.com</a></p>
+    <p>Llame ahora (203) 871-9742:<br></p>
+    <a href="tel:203-871-9742"><img src="/static/images/phone.png" style="width:42px;height:42px;"></a>
+    <p>Fax # (203) 481-1668:<br></p>
+    <a href="Fax # (203) 481-1668"><img src="/static/images/fax.png" style="width:42px;height:42px;"></a><br>
+    <p>Facebook:<br></p>
+    <a href="https://www.facebook.com/Private-criminal-defense-investigations-1134345970053033/"><img src="/static/images/facebook.png" style="width:42px;height:42px;"></a>
+  <hr class="solid">
+  <h6><a href="{% url 'blog-home_spanish' %}">Página Principal</a></h6>
+  <h6><a href="{% url 'blog-testimonials_spanish' %}">Testimoniales</a></h6>
+  <h6><a href="{% url 'blog-references_spanish' %}">Referencias</a></h6>
+  <h6><a href="https://viglioneinvestigations.s3.amazonaws.com/Venmo.jpg">Pagar (Venmo)</a></h6>
+  <h6><a href="https://www.paypal.com/paypalme/Ctl2473V">Pagar (PayPal)</a></h6>
+    <a href="/"><img src="https://imgs.search.brave.com/HconjuCvmgYmYiVt652PNajgLpCmC_bhlWXg1bSpY8U/rs:fit:766:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5L/V2dkQW1ZTmdHVWx0/bXFQZUFQZF9RSGFF/bCZwaWQ9QXBp" style="width:20px;height:20px;"><h7> ← </h7></a><h5>See page in English</h5>
+</footer>
+</div>
+</html>
