@@ -9,7 +9,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
+    'whitenoise.runserver_nostatic', # whitenoise servces static content
     'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
