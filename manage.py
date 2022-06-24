@@ -13,3 +13,6 @@ if __name__ == '__main__':
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+
+    
+    # Viglioneprivateinvestigations.com -- This is the domain purchased through Route 53 on AWS. This will be linked to the ELB instance.
