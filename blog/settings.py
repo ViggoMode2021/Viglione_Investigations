@@ -2,14 +2,14 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = 'exhlfdat&vfum(-34*c2uroi(($ww(yo$9pv98=e6p^gl(-eoj'
+SECRET_KEY = '#'
 
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic', # whitenoise servces static content
+    'whitenoise.runserver_nostatic',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
